@@ -1,0 +1,77 @@
+<app-header [headerTreningMovies] = 'trendingMovies'></app-header>
+
+<div class="container">
+
+  <div class="hello bg-info w-25 h-25">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam exercitationem vero, quae ex optio commodi dicta dolorum quasi provident ab cumque, voluptatum sed pariatur nostrum ad iste error aspernatur. Quos.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="brdr my-5 w-25"></div>
+        <h2>Trending Movies <br> To Watch Right now</h2>
+        <p class="second-color">Trending Movies To Watch Right now</p>
+      <div class="brdr my-5 w-100"></div>
+
+    </div>
+
+    <div *ngFor = 'let movie of trendingMovies' class="col-md-2">
+        <div class="movie position-relative">
+          <a [routerLink]="['/moviedetails' , movie.id]">
+            <img [src]="imgPrefix + movie.poster_path" class="w-100" alt="">
+            <h3 class="h5 mt-2">{{movie.title}}</h3>
+            <div class="vote position-absolute end-0 top-0">
+                {{movie.vote_average}}
+            </div>
+          </a>
+
+        </div>
+    </div>
+  </div>
+
+  <div class="row my-5">
+    <div class="col-md-4">
+      <div class="brdr my-5 w-25"></div>
+        <h2>Trending Tv <br> To Watch Right now</h2>
+        <p class="second-color">Trending Movies To Watch Right now</p>
+      <div class="brdr my-5 w-100"></div>
+
+    </div>
+
+    <div *ngFor = 'let movie of trendingTv' class="col-md-2">
+        <div class="movie position-relative">
+          <a [routerLink]="['/moviedetails' , movie.id]">
+            <img [src]="imgPrefix + movie.poster_path" class="w-100" alt="">
+            <h3 class="h5 mt-2">{{movie.name}}</h3>
+            <div class="vote position-absolute end-0 top-0">
+                {{movie.vote_average}}
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+
+  <div class="row my-5">
+    <div class="col-md-4">
+      <div class="brdr my-5 w-25"></div>
+        <h2>Trending People <br> To Watch Right now</h2>
+        <p class="second-color">Trending People To Watch Right now</p>
+      <div class="brdr my-5 w-100"></div>
+
+    </div>
+
+    <div *ngFor = 'let movie of trendingPeople' class="col-md-2">
+        <div class="movie position-relative">
+          <a [routerLink]="['/moviedetails' , movie.id]">
+            <img [src]="imgPrefix + movie.poster_path" class="w-100" alt="">
+            <h3 class="h5 mt-2">{{movie.title}}</h3>
+            <div class="vote position-absolute end-0 top-0">
+                {{movie.vote_average}}
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+
+

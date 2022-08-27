@@ -1,0 +1,37 @@
+body{
+  position: relative;
+}
+
+.container
+{
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: rgb(34, 34, 70); */
+  width: 40%;
+  box-shadow: 5px 3px 14px 0px #dddddd5e;
+}
+form .inpt
+{
+  padding: 5px 0;
+}
+
+input
+{
+  background-color: transparent !important;
+  border: .3px solid rgb(56 56 92 / 78%) !important;
+  color: white !important;
+}
+
+.alert
+{
+  padding: 5px;
+  margin: 3 !important;
+}
+
+p
+{
+  margin: 0 !important;
+}
